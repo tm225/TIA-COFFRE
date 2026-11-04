@@ -1,8 +1,12 @@
 {
-  "appId": "com.tia.coffre",
+  "appId": "com.tiacoffre.app",
   "appName": "TIA COFFRE",
   "webDir": "www",
   "backgroundColor": "#050b1f",
-  "server": { "androidScheme": "https" },
-  "android": { "allowMixedContent": false }
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
 }

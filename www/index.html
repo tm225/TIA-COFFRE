@@ -27,7 +27,7 @@ input,select,button{font:inherit;color:inherit}
 @keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.18)}}
 #app{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:calc(var(--sat) + 14px) 16px calc(var(--sab) + 120px)}
 .top{display:flex;align-items:center;gap:12px}
-.logo{width:50px;height:50px;border-radius:14px;box-shadow:0 6px 22px rgba(31,107,255,.55);animation:float 4s ease-in-out infinite}
+.logo{width:50px;height:50px;border-radius:14px;box-shadow:0 6px 22px rgba(232,113,10,.55);animation:float 4s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-4px) rotate(-2deg)}}
 .brand{flex:1;line-height:1.1}
 .brand b{font-size:22px;letter-spacing:.5px;font-weight:900}
@@ -54,7 +54,7 @@ input,select,button{font:inherit;color:inherit}
 .card .tx b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card .tx small{color:var(--mut);font-size:12px}
 .empty{text-align:center;padding:48px 20px;color:var(--mut);animation:rise .6s both}
-.empty .big{width:130px;height:130px;margin:0 auto 18px;border-radius:34px;animation:float 3.5s ease-in-out infinite;box-shadow:0 14px 50px rgba(31,107,255,.55)}
+.empty .big{width:130px;height:130px;margin:0 auto 18px;border-radius:34px;animation:float 3.5s ease-in-out infinite;box-shadow:0 14px 50px rgba(232,113,10,.55)}
 .empty h3{color:var(--ink);margin:0 0 6px;font-size:19px}
 .copy{text-align:center;color:var(--mut);font-size:12px;margin-top:32px;line-height:1.6}
 .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--sab) + 20px);z-index:20;display:flex;align-items:center;gap:10px;padding:16px 30px;border:0;border-radius:99px;background:linear-gradient(135deg,#ffd54a,#ffab00);color:#0b1b4d;font-weight:900;font-size:17px;cursor:pointer;animation:fabp 2.6s infinite;transition:scale .15s}
@@ -141,7 +141,7 @@ input,select,button{font:inherit;color:inherit}
 .vtools .icon-btn{background:rgba(20,20,30,.7);color:#fff;font-size:22px}
 .vhint{position:absolute;bottom:calc(var(--sab) + 84px);width:100%;text-align:center;color:#fff9;font-size:12px;margin:0;pointer-events:none}
 .lock{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:radial-gradient(120% 80% at 50% 0,var(--bg2),var(--bg));padding:20px}
-.lock .llogo{width:88px;height:88px;border-radius:24px;box-shadow:0 10px 40px rgba(31,107,255,.6);animation:float 3.5s ease-in-out infinite}
+.lock .llogo{width:88px;height:88px;border-radius:24px;box-shadow:0 10px 40px rgba(232,113,10,.6);animation:float 3.5s ease-in-out infinite}
 .lock h2{margin:14px 0 0}.lock p{margin:0;color:var(--mut);font-size:14px}
 .dots{display:flex;gap:16px;margin:22px 0}
 .dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--gold);transition:.15s}
@@ -153,7 +153,7 @@ input,select,button{font:inherit;color:inherit}
 .lock.shake .dots{animation:shake .4s}
 @keyframes shake{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
 #splash{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:radial-gradient(120% 80% at 50% 0,var(--bg2),var(--bg));animation:splashout .5s 1.15s forwards}
-#splash img{width:132px;height:132px;border-radius:34px;animation:zoomin 1s cubic-bezier(.2,1.2,.3,1) both;box-shadow:0 0 70px rgba(31,107,255,.8)}
+#splash img{width:132px;height:132px;border-radius:34px;animation:zoomin 1s cubic-bezier(.2,1.2,.3,1) both;box-shadow:0 0 70px rgba(232,113,10,.8)}
 #splash b{font-size:26px;letter-spacing:3px;animation:rise .8s .4s both}
 @keyframes zoomin{from{transform:scale(.3) rotate(-12deg);opacity:0}}
 @keyframes splashout{to{opacity:0;visibility:hidden}}
@@ -184,6 +184,36 @@ input,select,button{font:inherit;color:inherit}
 .wp{width:100%;height:150px;object-fit:cover;border-radius:14px;margin-top:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .wb{display:flex;gap:8px;margin-top:10px}
 .wb button{flex:1;padding:12px;border:0;border-radius:14px;background:rgba(255,255,255,.93);color:#0d0d14;font-weight:800;font-size:14px;cursor:pointer}
+
+/* ===== v1.1 : slides, groupes, paramètres ===== */
+:root[data-theme="light"]{--bg:#eef3ff;--bg2:#d3e0ff;--ink:#0b1b4d;--mut:#4d62a0;--glass:rgba(255,255,255,.78);--line:rgba(10,40,120,.16);--veil:rgba(232,239,255,.86);--btn:#0d0d14;--btnink:#fff;color-scheme:light}
+.pgh{display:flex;align-items:center;gap:8px;margin:6px 0 4px}
+.pgb{width:42px;height:42px;border-radius:14px;border:1px solid var(--line);background:var(--glass);font-size:24px;line-height:1;cursor:pointer;transition:transform .15s}
+.pgb:active{transform:scale(.9)}
+.pgt{flex:1;text-align:center}.pgt b{display:block;font-size:18px}.pgt small{color:var(--mut);font-size:12px}
+.dotsp{display:flex;justify-content:center;gap:7px;margin:8px 0 14px}
+.dotsp i{width:8px;height:8px;border-radius:99px;background:var(--line);transition:all .3s;cursor:pointer}
+.dotsp i.on{width:24px;background:var(--gold)}
+.pager{overflow:hidden;touch-action:pan-y}
+.track{display:flex;align-items:flex-start;will-change:transform}
+.slide{flex:0 0 100%;min-width:0}
+.track:not(.live) .slide:not(.act){height:0;overflow:hidden;visibility:hidden}
+.gh{display:flex;align-items:center;justify-content:space-between;margin:18px 4px 10px;font-weight:800;font-size:15px}
+.grp:first-child .gh{margin-top:4px}
+.gh em{font-style:normal;background:var(--glass);border:1px solid var(--line);padding:2px 10px;border-radius:99px;font-size:12px;color:var(--mut)}
+.wcard{height:170px;margin-top:-102px}
+.wcard.sel{height:320px}
+.srow{display:flex;align-items:center;gap:12px;width:100%;padding:14px;margin-bottom:8px;border-radius:16px;border:1px solid var(--line);background:var(--glass);text-align:left;cursor:pointer}
+.srow>span{flex:1;font-weight:700;font-size:15px}
+.srow small{display:block;color:var(--mut);font-weight:500;font-size:12px;margin-top:2px}
+.srow em{font-style:normal;color:var(--cyan);font-size:13px;font-weight:700}
+.srow svg{color:var(--cyan);flex:none}
+.sw{width:46px;height:28px;border-radius:99px;background:var(--line);position:relative;transition:.25s;flex:none}
+.sw::after{content:'';position:absolute;left:3px;top:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:.25s}
+.sw.on{background:var(--blue)}.sw.on::after{left:21px}
+.inter{text-align:center;padding:40px 10px;animation:rise .4s both}
+.inter .ico{width:84px;height:84px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:var(--glass);border:1px solid var(--line);color:var(--gold);animation:float 3s ease-in-out infinite}
+.inter h3{margin:0 0 8px}.inter p{margin:0;color:var(--mut);line-height:1.5}
 </style>
 </head>
 <body>
@@ -194,9 +224,10 @@ input,select,button{font:inherit;color:inherit}
     <div class="brand"><b>TIA <span>COFFRE</span></b><small id="count">0 document</small></div>
     <button class="icon-btn" id="btnSet" aria-label="Réglages"></button>
   </header>
-  <div class="search"><input id="q" type="search" placeholder="Rechercher un document ou un numéro…"></div>
-  <div class="chips" id="chips"></div>
-  <main class="stack" id="grid"></main>
+  <div class="search"><input id="q" type="search" placeholder="Rechercher un document…"></div>
+  <div class="pgh"><button class="pgb" data-pg="-1" aria-label="Précédent">‹</button><div class="pgt"><b id="pgTitle">Tous</b><small id="pgSub"></small></div><button class="pgb" data-pg="1" aria-label="Suivant">›</button></div>
+  <div class="dotsp" id="dotsp"></div>
+  <div class="pager" id="pager"><div class="track" id="track"></div></div>
   <div class="empty hidden" id="empty">
     <img class="big" src="icon.png" alt="">
     <h3>Votre coffre est vide</h3>
@@ -243,11 +274,16 @@ const LABELS=['N° de carte','N° d’identification','N° de pièce','N° d’a
 const MODES=[['auto','Auto'],['doc','Document'],['color','Couleur fidèle'],['bw','N&amp;B'],['orig','Original']];
 const MLABEL={auto:'Auto',doc:'Document',color:'Couleur fidèle',bw:'N&B',orig:'Original'};
 const layer=$('#layer');
+const SET=Object.assign({theme:'auto',defMode:'auto',lock:60000,bio:false},(()=>{try{return JSON.parse(localStorage.getItem('tia_set')||'{}')}catch(e){return{}}})());
+const saveSet=()=>localStorage.setItem('tia_set',JSON.stringify(SET));
+const applyTheme=()=>{const r=document.documentElement;if(SET.theme==='auto')r.removeAttribute('data-theme');else r.dataset.theme=SET.theme};applyTheme();
+const uid=()=>crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2);
+let noLock=0;const withLock=async f=>{noLock++;try{return await f()}finally{setTimeout(()=>{noLock--},2500)}};
 const WC={'Carte d’identité':['#1f6bff','#0a2e8f'],'Extrait de naissance':['#ffb300','#e07b00',1],'Diplôme':['#8a5cf6','#4527a0'],'Passeport':['#2bb673','#0f6e45'],'Permis de conduire':['#ef476f','#9d174d'],'Carte grise':['#06b6d4','#0e7490'],'Assurance':['#f97316','#9a3412'],'Santé':['#14b8a6','#115e59'],'Autre':['#64748b','#1e293b']};
 const wx=d=>`<div class="wx"><img class="wp" data-open="${d.id}" src="${d.thumb}" alt=""><div class="wb"><button data-open="${d.id}">Ouvrir</button><button data-share="${d.id}">Partager</button></div></div>`;
 function selectCard(id){selId=selId===id?null:id;document.querySelectorAll('.wcard').forEach(c=>{const on=c.dataset.id===selId,x=c.querySelector('.wx');c.classList.toggle('sel',on);
  if(on&&!x){const d=DOCS.find(z=>z.id===id);if(d)c.insertAdjacentHTML('beforeend',wx(d))}else if(!on&&x)x.remove()});
- const s=document.querySelector('.wcard.sel');if(s)setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'center'}),150)}
+ const s=document.querySelector('.slide.act .wcard.sel');if(s)setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'center'}),150)}
 let DOCS=[],filter='Tous',query='',E=null,selId=null;
 
 /* ---------- Base locale (IndexedDB) ---------- */
@@ -285,33 +321,57 @@ async function blobToCanvas(blob,max=2200){
  c.getContext('2d',{willReadFrequently:true}).drawImage(bm,0,0,c.width,c.height);if(bm.close)bm.close();return c}
 async function makeThumb(blob){const c=await blobToCanvas(blob,520);return c.toDataURL('image/jpeg',.8)}
 
-/* ---------- Accueil ---------- */
+/* ---------- Accueil : portefeuille + slides ---------- */
+let pg=0,tabs=['Tous'],liveT=0,suppress=false;
+const trk=$('#track'),pager=$('#pager');
+function cardHtml(d,i){const c=WC[d.type]||WC['Autre'],sel=d.id===selId,em=EMO[d.type]||'📁';
+ return `<article class="wcard ${sel?'sel':''} ${c[2]?'dk':''}" data-id="${d.id}" style="--i:${i};background:linear-gradient(135deg,${c[0]},${c[1]})"><div class="wh"><span class="e">${em}</span><div class="t"><b>${esc(d.name)}</b><small>${esc(d.type)} · ${fmtDate(d.created)}</small></div>${d.sides.length>1?'<span class="wr">R · V</span>':''}</div><span class="wm">${em}</span>${sel?wx(d):''}</article>`}
+const stackHtml=l=>`<div class="stack">${l.map(cardHtml).join('')}</div>`;
+function sync(){const t=tabs[pg]||'Tous',c=t==='Tous'?DOCS.length:DOCS.filter(d=>d.type===t).length;
+ $('#pgTitle').textContent=t==='Tous'?'Tous les documents':(EMO[t]||'')+' '+t;
+ $('#pgSub').textContent=c+' document'+(c>1?'s':'')+(tabs.length>1?' · glissez pour changer':'');
+ $('#dotsp').innerHTML=tabs.map((_,k)=>`<i class="${k===pg?'on':''}" data-go="${k}"></i>`).join('')}
 function render(){
  const n=DOCS.length;$('#count').textContent=n+' document'+(n>1?'s':'')+' protégé'+(n>1?'s':'');
- const types=['Tous',...new Set(DOCS.map(d=>d.type))];
- if(!types.includes(filter))filter='Tous';if(selId&&!DOCS.find(d=>d.id===selId))selId=null;
- $('#chips').innerHTML=n?types.map(t=>`<button class="${t===filter?'on':''}" data-t="${esc(t)}">${t==='Tous'?'Tous':(EMO[t]||'📁')+' '+esc(t)}</button>`).join(''):'';
- const q=query.trim().toLowerCase();
- const list=DOCS.filter(d=>(filter==='Tous'||d.type===filter)&&(!q||(d.name+' '+d.type+' '+d.numbers.map(x=>x.label+' '+x.value).join(' ')).toLowerCase().includes(q))).sort((a,b)=>b.updated-a.updated);
- $('#grid').innerHTML=list.map((d,i)=>{const c=WC[d.type]||WC['Autre'],n=d.numbers[0],sel=d.id===selId,em=EMO[d.type]||'📁';
-  const nt=n?esc(n.label||'N°')+' · •••• '+esc(String(n.value).slice(-3)):'Aucun numéro enregistré';
-  return `<article class="wcard ${sel?'sel':''} ${c[2]?'dk':''}" data-id="${d.id}" style="--i:${i};background:linear-gradient(135deg,${c[0]},${c[1]})"><div class="wh"><span class="e">${em}</span><div class="t"><b>${esc(d.name)}</b><small>${esc(d.type)} · ${fmtDate(d.created)}</small></div>${d.sides.length>1?'<span class="wr">R · V</span>':''}</div><div class="wn">${nt}</div><span class="wm">${em}</span>${sel?wx(d):''}</article>`}).join('');
- $('#empty').classList.toggle('hidden',n>0);
-}
-$('#chips').onclick=e=>{const b=e.target.closest('[data-t]');if(b){filter=b.dataset.t;render()}};
-$('#grid').onclick=e=>{const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return}
+ const present=TYPES.filter(t=>DOCS.some(d=>d.type===t));tabs=['Tous',...present];if(pg>=tabs.length)pg=0;
+ if(selId&&!DOCS.find(d=>d.id===selId))selId=null;
+ const q=query.trim().toLowerCase(),list=DOCS.filter(d=>!q||(d.name+' '+d.type).toLowerCase().includes(q)).sort((a,b)=>b.created-a.created);
+ const slide=t=>{let h;
+  if(t==='Tous'){h=present.map(p=>[p,list.filter(d=>d.type===p)]).filter(g=>g[1].length).map(([p,l])=>`<section class="grp"><h3 class="gh"><span>${EMO[p]||'📁'} ${esc(p)}</span><em>${l.length}</em></h3>${stackHtml(l)}</section>`).join('')}
+  else h=stackHtml(list.filter(d=>d.type===t));
+  return `<div class="slide">${h||'<p class="hint" style="padding:30px">Aucun résultat</p>'}</div>`};
+ trk.innerHTML=tabs.map(slide).join('');
+ [...trk.children].forEach((s,k)=>s.classList.toggle('act',k===pg));
+ trk.classList.remove('live');trk.style.transition='none';trk.style.transform=`translateX(${-pg*pager.clientWidth}px)`;
+ sync();$('#empty').classList.toggle('hidden',n>0);['.pgh','#dotsp','#pager'].forEach(x=>$(x).classList.toggle('hidden',n===0))}
+function goto(i,anim=true){pg=Math.max(0,Math.min(tabs.length-1,i));trk.classList.add('live');
+ trk.style.transition=anim?'transform .42s cubic-bezier(.2,.8,.2,1)':'none';trk.style.transform=`translateX(${-pg*pager.clientWidth}px)`;
+ [...trk.children].forEach((s,k)=>s.classList.toggle('act',k===pg));sync();clearTimeout(liveT);liveT=setTimeout(()=>trk.classList.remove('live'),anim?470:0)}
+addEventListener('resize',()=>goto(pg,false));
+(function(){let sx=null,sy=0,st=0,dec=0;
+ pager.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;sx=e.clientX;sy=e.clientY;st=Date.now();dec=0});
+ pager.addEventListener('pointermove',e=>{if(sx==null)return;const dx=e.clientX-sx,dy=e.clientY-sy;
+  if(!dec){if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)*1.2){dec=1;try{pager.setPointerCapture(e.pointerId)}catch(_){}trk.classList.add('live');trk.style.transition='none'}else if(Math.abs(dy)>10){dec=2;sx=null;return}}
+  if(dec===1){let off=dx;if((pg===0&&dx>0)||(pg===tabs.length-1&&dx<0))off=dx/3;trk.style.transform=`translateX(${-pg*pager.clientWidth+off}px)`;suppress=true}});
+ const end=e=>{if(sx==null)return;if(dec===1){const dx=e.clientX-sx,W=pager.clientWidth,v=Math.abs(dx)/Math.max(1,Date.now()-st);let k=pg;if(Math.abs(dx)>W*.22||v>.5)k=dx<0?pg+1:pg-1;goto(k)}sx=null;setTimeout(()=>{suppress=false},60)};
+ pager.addEventListener('pointerup',end);pager.addEventListener('pointercancel',e=>{if(dec===1)goto(pg);sx=null;setTimeout(()=>{suppress=false},60)})})();
+pager.onclick=e=>{if(suppress)return;
+ const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return}
  const h=e.target.closest('[data-share]');if(h){const d=DOCS.find(x=>x.id===h.dataset.share);if(d)shareDoc(d);return}
  const c=e.target.closest('[data-id]');if(c)selectCard(c.dataset.id)};
+$('.pgh').onclick=e=>{const b=e.target.closest('[data-pg]');if(b)goto(pg+ +b.dataset.pg)};
+$('#dotsp').onclick=e=>{const b=e.target.closest('[data-go]');if(b)goto(+b.dataset.go)};
 $('#q').oninput=e=>{query=e.target.value;render()};
 
-/* ---------- Capture ---------- */
-async function pickImage(src){
+/* ---------- Capture & fichiers ---------- */
+function pickFiles(accept,multiple){return withLock(()=>new Promise(res=>{const i=document.createElement('input');i.type='file';i.accept=accept;i.multiple=!!multiple;i.onchange=()=>res([...i.files]);i.oncancel=()=>res([]);i.click()}))}
+function pickImage(src){return withLock(async()=>{
  const C=window.Capacitor,cam=C&&C.Plugins&&C.Plugins.Camera;
  if(cam&&C.isNativePlatform&&C.isNativePlatform()){
   try{const r=await cam.getPhoto({quality:95,resultType:'dataUrl',source:src==='cam'?'CAMERA':'PHOTOS',correctOrientation:true,saveToGallery:false});return await (await fetch(r.dataUrl)).blob()}catch(e){return null}}
- return new Promise(res=>{const inp=src==='cam'?$('#fileCam'):$('#fileGal');inp.value='';inp.onchange=()=>res(inp.files[0]||null);inp.click()})}
+ return new Promise(res=>{const inp=src==='cam'?$('#fileCam'):$('#fileGal');inp.value='';inp.onchange=()=>res(inp.files[0]||null);inp.click()})})}
 async function choosePick(){
- const c=await sheet('Ajouter un document',[{ic:'cam',t:'Prendre une photo',s:'Détection et scan automatiques',v:'cam'},{ic:'image',t:'Depuis la galerie',s:'Importer une image existante',v:'gal'}]);
+ const c=await sheet('Ajouter une face',[{ic:'cam',t:'Prendre une photo',s:'Détection et scan automatiques',v:'cam'},{ic:'image',t:'Depuis la galerie',s:'Importer une image existante',v:'gal'}]);
  return c?pickImage(c):null}
 
 /* ---------- Moteur de vision (100 % hors ligne) ---------- */
@@ -443,7 +503,8 @@ async function makePDF(blobs){
  return new Blob(parts,{type:'application/pdf'})}
 
 /* ---------- Partage ---------- */
-async function shareFiles(files,title){
+const shareFiles=(files,title)=>withLock(()=>shareFiles0(files,title));
+async function shareFiles0(files,title){
  const C=window.Capacitor,P=C&&C.Plugins;
  if(P&&P.Share&&P.Filesystem&&C.isNativePlatform&&C.isNativePlatform()){
   const uris=[];for(const f of files){await P.Filesystem.writeFile({path:f.name,data:await b64(f.blob),directory:'CACHE'});uris.push((await P.Filesystem.getUri({path:f.name,directory:'CACHE'})).uri)}
@@ -530,34 +591,25 @@ function enhanceStep(ov,src,mode0){return new Promise(async res=>{
  await new Promise(r=>setTimeout(r,60));run(mode0||'auto')})}
 async function captureSide(ov,blob){
  const src=await blobToCanvas(blob),w=await cropStep(ov,src);if(!w)return null;
- const orig=await toBlob(w,.95),r=await enhanceStep(ov,w,'auto');if(!r)return null;
+ const orig=await toBlob(w,.95),r=await enhanceStep(ov,w,SET.defMode);if(!r)return null;
  return{orig,img:r.blob,mode:r.mode}}
 function stepForm(ov){return new Promise(res=>{
  $('#eTitle',ov).textContent=E.id?'Modifier le document':'Informations';
  const stage=$('#eStage',ov),foot=$('#eFoot',ov),urls=E.sides.map(s=>URL.createObjectURL(s.img));
  stage.innerHTML=`<div class="sides">${E.sides.map((s,i)=>`<div class="sd"><img src="${urls[i]}" alt=""><b>${i?'Verso':'Recto'}</b>${i?`<button class="rm" data-rm aria-label="Retirer le verso">${ic('x',14)}</button>`:''}</div>`).join('')}${E.sides.length<2?`<button class="sd add" data-verso>${ic('plus',26)}<b>Ajouter le verso</b></button>`:''}</div>
  <label class="fl">Nom du document<input id="fName" maxlength="60" placeholder="ex. Carte d’identité" value="${esc(E.name)}"></label>
- <label class="fl">Type<select id="fType">${TYPES.map(t=>`<option ${t===E.type?'selected':''}>${esc(t)}</option>`).join('')}</select></label>
- <h4 class="sec">NUMÉROS DU DOCUMENT</h4><div id="fNums"></div><button class="btn addn" id="fAdd">${ic('plus',18)} Ajouter un numéro</button>
- <datalist id="nlabels">${LABELS.map(l=>`<option value="${esc(l)}"></option>`).join('')}</datalist>`;
+ <label class="fl">Catégorie<select id="fType">${TYPES.map(t=>`<option ${t===E.type?'selected':''}>${esc(t)}</option>`).join('')}</select></label>`;
  foot.innerHTML=`<button class="btn" id="bNo">Annuler</button><button class="btn pri" id="bSave">${ic('check',18)} Enregistrer</button>`;
- const nums=$('#fNums',stage);
- const paint=()=>{nums.innerHTML=E.numbers.map((n,i)=>`<div class="nrow"><input data-f="label" data-i="${i}" list="nlabels" placeholder="Intitulé" value="${esc(n.label)}"><input data-f="value" data-i="${i}" placeholder="Numéro" value="${esc(n.value)}"><select data-f="side" data-i="${i}"><option value="0" ${n.side==0?'selected':''}>Recto</option><option value="1" ${n.side==1?'selected':''}>Verso</option></select><button class="x" data-del="${i}" aria-label="Supprimer">${ic('x',16)}</button></div>`).join('')};
- paint();
  const done=r=>{urls.forEach(u=>URL.revokeObjectURL(u));res(r)};
- const sync=e=>{const t=e.target;if(t.dataset&&t.dataset.f){const n=E.numbers[+t.dataset.i];if(n)n[t.dataset.f]=t.dataset.f==='side'?+t.value:t.value}if(t.id==='fName')E.name=t.value;if(t.id==='fType')E.type=t.value};
+ const sync=e=>{const t=e.target;if(t.id==='fName')E.name=t.value;if(t.id==='fType')E.type=t.value};
  stage.oninput=sync;stage.onchange=sync;
- stage.onclick=e=>{
-  if(e.target.closest('#fAdd')){E.numbers.push({label:'',value:'',side:0});paint();const l=nums.lastElementChild;if(l)l.querySelector('input').focus();return}
-  const dl=e.target.closest('[data-del]');if(dl){E.numbers.splice(+dl.dataset.del,1);paint();return}
-  if(e.target.closest('[data-rm]')){done('rm');return}
-  if(e.target.closest('[data-verso]'))done('verso')};
+ stage.onclick=e=>{if(e.target.closest('[data-rm]')){done('rm');return}if(e.target.closest('[data-verso]'))done('verso')};
  $('#bNo',foot).onclick=()=>done('cancel');$('#bSave',foot).onclick=()=>done('save');ov.onCancel=()=>done('cancel')})}
 async function persist(){
  const d={id:E.id||(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2)),
   name:(E.name||'').trim()||E.type,type:E.type,created:E.created,updated:Date.now(),
   sides:E.sides.map(s=>({orig:s.orig,img:s.img,mode:s.mode})),
-  numbers:E.numbers.filter(n=>String(n.value).trim()).map(n=>({label:String(n.label).trim(),value:String(n.value).trim(),side:n.side?1:0})),
+  numbers:E.numbers||[],
   thumb:await makeThumb(E.sides[0].img)};
  await DB.put(d);const i=DOCS.findIndex(x=>x.id===d.id);if(i>=0)DOCS[i]=d;else DOCS.unshift(d);render();return d}
 async function formLoop(ov){
@@ -567,14 +619,24 @@ async function formLoop(ov){
   if(r==='rm'){E.sides.length=1;continue}
   if(r==='save'){await persist();toast('Document enregistré dans le coffre');return true}
   return false}}
+function versoStep(ov,src){return new Promise(res=>{
+ $('#eTitle',ov).textContent='Verso';
+ $('#eStage',ov).innerHTML=`<div class="inter"><div class="ico">${ic('rot',40)}</div><h3>Recto enregistré ✓</h3><p>Retournez maintenant votre document pour capturer le <b>verso</b>.</p></div>`;
+ $('#eFoot',ov).innerHTML=`<button class="btn" id="vNo">Sans verso</button><button class="btn pri" id="vGo">${ic(src==='cam'?'cam':'image',18)} ${src==='cam'?'Photographier le verso':'Choisir le verso'}</button>`;
+ ov.onCancel=()=>res(null);$('#vNo',ov).onclick=()=>res(null);$('#vGo',ov).onclick=async()=>res(await pickImage(src))})}
 async function newScan(){
- const blob=await choosePick();if(!blob)return;
- const ov=openEditor();E={id:null,name:'',type:TYPES[0],created:Date.now(),sides:[],numbers:[{label:'',value:'',side:0}]};
- try{const s=await captureSide(ov,blob);if(s){E.sides.push(s);await formLoop(ov)}}
+ const mode=await sheet('Nouveau document',[{ic:'cam',t:'Recto + verso',s:'Les deux faces en un seul ajout',v:'two'},{ic:'file',t:'Une seule face',s:'Passeport, diplôme, extrait…',v:'one'}]);if(!mode)return;
+ const src=await sheet('Source de l’image',[{ic:'cam',t:'Prendre une photo',s:'Détection et scan automatiques',v:'cam'},{ic:'image',t:'Depuis la galerie',s:'Importer une image existante',v:'gal'}]);if(!src)return;
+ const blob=await pickImage(src);if(!blob)return;
+ const ov=openEditor();E={id:null,name:'',type:TYPES[0],created:Date.now(),sides:[],numbers:[]};
+ try{const s=await captureSide(ov,blob);
+  if(s){E.sides.push(s);
+   if(mode==='two'){const b2=await versoStep(ov,src);if(b2){const s2=await captureSide(ov,b2);if(s2)E.sides.push(s2)}}
+   await formLoop(ov)}}
  catch(err){console.error(err);toast('Une erreur est survenue pendant le scan')}
  closeLayer(ov)}
 async function editDoc(doc){
- E={id:doc.id,name:doc.name,type:doc.type,created:doc.created,sides:doc.sides.map(s=>({...s})),numbers:doc.numbers.length?doc.numbers.map(n=>({...n})):[{label:'',value:'',side:0}]};
+ E={id:doc.id,name:doc.name,type:doc.type,created:doc.created,sides:doc.sides.map(s=>({...s})),numbers:(doc.numbers||[]).map(n=>({...n}))};
  const ov=openEditor();try{await formLoop(ov)}catch(err){console.error(err);toast('Enregistrement impossible')}closeLayer(ov)}
 async function reEnhance(doc,si){
  const ov=openEditor();
@@ -592,16 +654,13 @@ function openDetail(id){
  const draw=()=>{const doc=cur();if(!doc){ov.onCancel();return}
   urls.forEach(u=>URL.revokeObjectURL(u));urls=doc.sides.map(s=>URL.createObjectURL(s.img));if(si>=doc.sides.length)si=0;
   $('#dT',ov).textContent=doc.name;
-  const grp=k=>{const l=doc.numbers.filter(n=>n.side===k);return l.length?`<h4 class="sec">${k?'VERSO':'RECTO'}</h4>`+l.map(n=>`<button class="nitem" data-copy="${esc(n.value)}"><span>${esc(n.label||'Numéro')}</span><b>${esc(n.value)}</b><i>copier</i></button>`).join(''):''};
   $('#dS',ov).innerHTML=`${doc.sides.length>1?`<div class="tabs"><button class="${si===0?'on':''}" data-t="0">Recto</button><button class="${si===1?'on':''}" data-t="1">Verso</button></div>`:''}
    <div class="imgbox" data-a="zoom"><img src="${urls[si]}" alt="${esc(doc.name)}"><span class="zb">${ic('expand',14)} Agrandir</span></div>
-   <div class="meta">${EMO[doc.type]||'📁'} ${esc(doc.type)} · ajouté le ${fmtDate(doc.created)}</div>${grp(0)}${grp(1)}`;
+   <div class="meta">${EMO[doc.type]||'📁'} ${esc(doc.type)} · ajouté le ${fmtDate(doc.created)}</div>`;
   $('#dF',ov).innerHTML=`<button class="btn" data-a="zoom">${ic('expand',22)}Agrandir</button><button class="btn" data-a="enh">${ic('wand',22)}Améliorer IA</button><button class="btn" data-a="share">${ic('share',22)}Partager</button><button class="btn del" data-a="del">${ic('trash',22)}Supprimer</button>`};
  ov.addEventListener('click',async e=>{
   const doc=cur();if(!doc)return;
   const t=e.target.closest('[data-t]');if(t){si=+t.dataset.t;draw();return}
-  const c=e.target.closest('[data-copy]');
-  if(c){try{await navigator.clipboard.writeText(c.dataset.copy);toast('Numéro copié')}catch(_){toast('Copie impossible')}return}
   const a=e.target.closest('[data-a]');if(!a)return;const k=a.dataset.a;
   if(k==='zoom')openViewer(urls[si]);
   else if(k==='share')shareDoc(doc);
@@ -612,35 +671,106 @@ function openDetail(id){
    if(ok){await DB.del(doc.id);DOCS=DOCS.filter(x=>x.id!==doc.id);render();ov.onCancel();toast('Document supprimé')}}});
  draw()}
 
-/* ---------- Code de verrouillage ---------- */
+/* ---------- Verrouillage : code + empreinte ---------- */
 async function hashPin(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('tia-coffre:'+p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function pinPad(title,sub,canSkip,verify){return new Promise(res=>{
- let v='',busy=false;
- const d=el(`<div class="lock"><img class="llogo" src="icon.png" alt=""><h2>${title}</h2><p>${sub}</p><div class="dots"><i></i><i></i><i></i><i></i></div><div class="pad">${[1,2,3,4,5,6,7,8,9,'',0,'⌫'].map(k=>k===''?'<span></span>':`<button data-k="${k}">${k}</button>`).join('')}</div>${canSkip?'<button class="link" data-skip>Plus tard</button>':''}<p style="margin-top:22px;font-size:12px">© 2026 TIA COFFRE</p></div>`);
+function bioPlugin(){const C=window.Capacitor;if(!C||!C.isNativePlatform||!C.isNativePlatform())return null;return(C.Plugins&&C.Plugins.BiometricAuth)||(C.registerPlugin&&C.registerPlugin('BiometricAuth'))||null}
+async function bioAvailable(){const B=bioPlugin();if(!B)return false;try{const r=await B.checkBiometry();return !!r.isAvailable}catch(e){return false}}
+async function bioAuth(reason){const B=bioPlugin();if(!B)return false;
+ try{await withLock(()=>B.authenticate({reason,cancelTitle:'Utiliser le code',allowDeviceCredential:false,androidTitle:'TIA COFFRE',androidSubtitle:reason,androidConfirmationRequired:false}));return true}catch(e){return false}}
+function pinPad(title,sub,canSkip,verify,bio){return new Promise(res=>{
+ let v='',busy=false;const useBio=!!bio&&!!bioPlugin();
+ const d=el(`<div class="lock"><img class="llogo" src="icon.png" alt=""><h2>${title}</h2><p>${sub}</p><div class="dots"><i></i><i></i><i></i><i></i></div><div class="pad">${[1,2,3,4,5,6,7,8,9,'',0,'⌫'].map(k=>k===''?'<span></span>':`<button data-k="${k}">${k}</button>`).join('')}</div>${useBio?'<button class="link" data-bio>👆 Utiliser l’empreinte digitale</button>':''}${canSkip?'<button class="link" data-skip>Plus tard</button>':''}<p style="margin-top:18px;font-size:12px">© 2026 TIA COFFRE</p></div>`);
  document.body.appendChild(d);const dots=[...d.querySelectorAll('.dots i')],paint=()=>dots.forEach((x,i)=>x.classList.toggle('on',i<v.length));
+ const tryBio=async()=>{if(busy)return;busy=true;const ok=await bioAuth('Déverrouiller TIA COFFRE');busy=false;if(ok){d.remove();res('bio')}};
  d.onclick=async e=>{
   if(e.target.closest('[data-skip]')){d.remove();res(null);return}
+  if(e.target.closest('[data-bio]')){tryBio();return}
   const b=e.target.closest('[data-k]');if(!b||busy)return;const k=b.dataset.k;
   if(k==='⌫')v=v.slice(0,-1);else if(v.length<4)v+=k;paint();
   if(v.length===4){busy=true;const ok=verify?await verify(v):true;
-   if(ok){d.remove();res(v)}else{d.classList.add('shake');if(navigator.vibrate)navigator.vibrate(80);setTimeout(()=>{d.classList.remove('shake');v='';paint();busy=false},450)}}}})}
+   if(ok){d.remove();res(v)}else{d.classList.add('shake');if(navigator.vibrate)navigator.vibrate(80);setTimeout(()=>{d.classList.remove('shake');v='';paint();busy=false},450)}}};
+ if(useBio)setTimeout(tryBio,400)})}
 async function setPin(canSkip){
  const a=await pinPad('Créer un code','Choisissez 4 chiffres pour verrouiller le coffre',canSkip);if(!a)return false;
  await pinPad('Confirmer le code','Saisissez-le une seconde fois',false,async c=>c===a);
  localStorage.setItem('tia_pin',await hashPin(a));toast('Code enregistré');return true}
 async function checkPin(){const h=localStorage.getItem('tia_pin');return pinPad('Code actuel','Entrez votre code actuel',false,async c=>await hashPin(c)===h)}
+function lockNow(){const h=localStorage.getItem('tia_pin');return pinPad('Coffre verrouillé',bioPlugin()&&SET.bio?'Code ou empreinte digitale':'Entrez votre code',false,async c=>await hashPin(c)===h,SET.bio)}
 async function startupLock(){
- try{const h=localStorage.getItem('tia_pin');
-  if(h)await pinPad('Coffre verrouillé','Entrez votre code',false,async c=>await hashPin(c)===h);
+ try{if(localStorage.getItem('tia_pin'))await lockNow();
   else if(!localStorage.getItem('tia_pinAsked')){localStorage.setItem('tia_pinAsked','1');await setPin(true)}}catch(e){console.error(e)}}
-$('#btnSet').onclick=async()=>{
- const has=!!localStorage.getItem('tia_pin');
- const c=await sheet('Réglages',has?[{ic:'lock',t:'Modifier le code',s:'Changer le code à 4 chiffres',v:'chg'},{ic:'trash',t:'Retirer le code',s:'Ouvrir le coffre sans code',v:'rm'}]:[{ic:'lock',t:'Définir un code',s:'Verrouiller l’application par un code à 4 chiffres',v:'set'}],'TIA COFFRE · version 1.0<br>© 2026 TIA COFFRE — Tous droits réservés<br>Données stockées uniquement sur cet appareil.');
- try{if(c==='set')await setPin(false);
-  else if(c==='chg'){await checkPin();await setPin(false)}
-  else if(c==='rm'){await checkPin();localStorage.removeItem('tia_pin');toast('Code retiré')}}catch(e){console.error(e)}};
 let hiddenAt=0;
-document.addEventListener('visibilitychange',()=>{if(document.hidden)hiddenAt=Date.now();else if(hiddenAt&&Date.now()-hiddenAt>60000&&localStorage.getItem('tia_pin')&&!$('.lock')){const h=localStorage.getItem('tia_pin');pinPad('Coffre verrouillé','Entrez votre code',false,async c=>await hashPin(c)===h)}});
+document.addEventListener('visibilitychange',()=>{
+ if(document.hidden){hiddenAt=Date.now();return}
+ if(!hiddenAt||noLock>0||SET.lock<0||!localStorage.getItem('tia_pin')||$('.lock'))return;
+ if(Date.now()-hiddenAt>=SET.lock)lockNow()});
+
+/* ---------- Données : import, sauvegarde, restauration ---------- */
+const guessType=n=>/cni|identit|carte nat/i.test(n)?TYPES[0]:/naissance|extrait/i.test(n)?TYPES[1]:/dipl/i.test(n)?TYPES[2]:/passeport|passport/i.test(n)?TYPES[3]:/permis/i.test(n)?TYPES[4]:/grise/i.test(n)?TYPES[5]:/assur/i.test(n)?TYPES[6]:/sant[eé]|carnet/i.test(n)?TYPES[7]:TYPES[8];
+async function importPhotos(){
+ const files=await pickFiles('image/*',true);if(!files.length)return;
+ const groups=new Map();
+ for(const f of files){const nm=f.name.replace(/\.[^.]+$/,''),m=nm.match(/^(.*?)[-_ ]*(recto|verso)$/i),key=(m&&m[1])||nm,side=m&&/verso/i.test(m[2])?1:0;if(!groups.has(key))groups.set(key,[]);groups.get(key).push({f,side})}
+ toast('Import en cours…');let n=0;
+ for(const [key,arr] of groups){try{arr.sort((a,b)=>a.side-b.side);const sides=[];
+  for(const a of arr.slice(0,2)){const b=await toBlob(await blobToCanvas(a.f,2200),.93);sides.push({orig:b,img:b,mode:'orig'})}
+  const name=key.replace(/_+/g,' ').trim()||'Document',d={id:uid(),name,type:guessType(name),created:Date.now(),updated:Date.now(),sides,numbers:[],thumb:await makeThumb(sides[0].img)};
+  await DB.put(d);DOCS.unshift(d);n++}catch(e){console.error(e)}}
+ render();toast(n+' document'+(n>1?'s':'')+' importé'+(n>1?'s':''))}
+async function backup(){
+ if(!DOCS.length){toast('Aucun document à sauvegarder');return}
+ toast('Préparation de la sauvegarde…');
+ const out=[];for(const d of DOCS)out.push({...d,sides:await Promise.all(d.sides.map(async s=>({mode:s.mode,orig:await b64(s.orig),img:await b64(s.img)})))});
+ const blob=new Blob([JSON.stringify({app:'TIA COFFRE',v:1,date:Date.now(),docs:out})],{type:'application/json'});
+ try{await shareFiles([{blob,name:'TIA-COFFRE-sauvegarde-'+new Date().toISOString().slice(0,10)+'.json'}],'Sauvegarde TIA COFFRE')}
+ catch(e){const m=String((e&&(e.message||e.name))||e);if(!/cancel|abort/i.test(m))toast('Sauvegarde impossible')}}
+async function restore(){
+ const [f]=await pickFiles('application/json,.json',false);if(!f)return;
+ try{const j=JSON.parse(await f.text());if(j.app!=='TIA COFFRE'||!Array.isArray(j.docs))throw 0;
+  const toB=x=>fetch('data:image/jpeg;base64,'+x).then(r=>r.blob());let n=0;
+  for(const d of j.docs){const sides=[];for(const s of d.sides)sides.push({mode:s.mode,orig:await toB(s.orig),img:await toB(s.img)});
+   const nd={...d,sides};await DB.put(nd);const i=DOCS.findIndex(x=>x.id===nd.id);if(i>=0)DOCS[i]=nd;else DOCS.unshift(nd);n++}
+  render();toast(n+' document'+(n>1?'s':'')+' restauré'+(n>1?'s':''))}
+ catch(e){toast('Fichier de sauvegarde invalide')}}
+
+/* ---------- Paramètres ---------- */
+const LOCKS={0:'Immédiat','60000':'Après 1 minute','300000':'Après 5 minutes','-1':'Jamais'};
+const THEMES={auto:'Automatique',dark:'Sombre',light:'Clair'};
+function openSettings(){
+ const ov=openLayer(`<div class="bar"><button class="icon-btn" data-x>${ic('back')}</button><h2>Paramètres</h2></div><div class="stage" id="sS"></div>`,'editor');
+ const row=(i,t,sub,val,k)=>`<button class="srow" data-s="${k}">${ic(i,20)}<span>${t}${sub?`<small>${sub}</small>`:''}</span>${val==null?'':`<em>${val}</em>`}</button>`;
+ const draw=()=>{const has=!!localStorage.getItem('tia_pin');
+  $('#sS',ov).innerHTML=`<h4 class="sec">SÉCURITÉ</h4>
+  ${row('lock','Code de verrouillage','Code à 4 chiffres',has?'Activé':'Désactivé','pin')}
+  <button class="srow" data-s="bio">${ic('lock',20)}<span>Empreinte digitale<small>Déverrouiller avec le capteur du téléphone</small></span><i class="sw ${SET.bio&&has?'on':''}"></i></button>
+  ${row('lock','Verrouillage automatique','Quand l’application est quittée',LOCKS[SET.lock],'lockd')}
+  <h4 class="sec">APPARENCE</h4>${row('eye','Thème',null,THEMES[SET.theme],'theme')}
+  <h4 class="sec">SCAN</h4>${row('wand','Amélioration par défaut','Mode appliqué après chaque scan',MLABEL[SET.defMode],'defm')}
+  <h4 class="sec">MES DONNÉES</h4>
+  ${row('image','Importer des photos existantes','Recto et verso regroupés si nommés « …-recto » / « …-verso »',null,'imp')}
+  ${row('share','Sauvegarder mes documents','Un fichier à garder en lieu sûr',null,'bak')}
+  ${row('file','Restaurer une sauvegarde','Retrouver vos documents sur un nouveau téléphone',null,'res')}
+  <p class="aboutp">TIA COFFRE · version 1.1<br>© 2026 TIA COFFRE — Tous droits réservés<br>${DOCS.length} document${DOCS.length>1?'s':''} stocké${DOCS.length>1?'s':''} uniquement sur cet appareil.</p>`};
+ ov.addEventListener('click',async e=>{const b=e.target.closest('[data-s]');if(!b)return;const k=b.dataset.s,has=!!localStorage.getItem('tia_pin');
+  try{
+   if(k==='pin'){if(!has)await setPin(false);else{const c=await sheet('Code de verrouillage',[{ic:'lock',t:'Modifier le code',v:'chg'},{ic:'trash',t:'Retirer le code',s:'Le coffre s’ouvrira sans code',v:'rm'}]);
+     if(c==='chg'){await checkPin();await setPin(false)}else if(c==='rm'){await checkPin();localStorage.removeItem('tia_pin');SET.bio=false;saveSet();toast('Code retiré')}}}
+   else if(k==='bio'){
+    if(SET.bio){SET.bio=false;saveSet()}
+    else{if(!has&&!await setPin(true))return;
+     if(!bioPlugin()){toast('Empreinte disponible dans l’application Android');return}
+     if(!await bioAvailable()){toast('Aucune empreinte enregistrée sur ce téléphone');return}
+     if(await bioAuth('Activer l’empreinte digitale')){SET.bio=true;saveSet();toast('Empreinte activée')}}}
+   else if(k==='lockd'){const c=await sheet('Verrouillage automatique',Object.keys(LOCKS).map(x=>({ic:'lock',t:LOCKS[x],v:+x})));if(c!=null){SET.lock=c;saveSet()}}
+   else if(k==='theme'){const c=await sheet('Thème',Object.keys(THEMES).map(x=>({ic:'eye',t:THEMES[x],v:x})));if(c){SET.theme=c;saveSet();applyTheme()}}
+   else if(k==='defm'){const c=await sheet('Amélioration par défaut',MODES.filter(m=>m[0]!=='orig').map(m=>({ic:'wand',t:MLABEL[m[0]],v:m[0]})).concat([{ic:'image',t:'Original',s:'Sans traitement',v:'orig'}]));if(c){SET.defMode=c;saveSet()}}
+   else if(k==='imp')await importPhotos();
+   else if(k==='bak')await backup();
+   else if(k==='res')await restore();
+  }catch(err){console.error(err)}
+  draw()});
+ draw()}
+$('#btnSet').onclick=openSettings;
 
 /* ---------- Démarrage ---------- */
 $('#fab').onclick=newScan;
